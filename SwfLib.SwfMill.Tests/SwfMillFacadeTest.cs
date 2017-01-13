@@ -13,20 +13,18 @@ namespace SwfLib.SwfMill.Tests {
     public class SwfMillFacadeTest {
 
         [Test]
-        [Ignore]
         public void SwfToXmlTest() {
             var source = GetType().Assembly.GetManifestResourceStream("SwfLib.SwfMill.Tests.FlashTest.swf");
             var file = SwfFile.ReadFrom(source);
             var doc = new SwfMillFacade().ConvertToXml(file);
             doc.Declaration = new XDeclaration("1", "utf-8", "yes");
             var res = doc.ToString();
-            using (var writer = new StreamWriter(@"d:\Sergey\test.xml", false, Encoding.UTF8)) {
+            using (var writer = new StreamWriter(@"d:\Test\test.xml", false, Encoding.UTF8)) {
                 doc.Save(writer);
             }
         }
 
         [Test]
-        [Ignore]
         public void ReadHugeXml() {
             var sourceStream = OpenEmbeddedResource("HugeSwfXml.xml");
             var xml = XDocument.Load(new StreamReader(sourceStream));
@@ -36,7 +34,6 @@ namespace SwfLib.SwfMill.Tests {
         }
 
         [Test]
-        [Ignore]
         public void ReadHugeXml2() {
             var sourceStream = OpenEmbeddedResource("HugeSwfXml2.xml");
             var xml = XDocument.Load(new StreamReader(sourceStream));
@@ -46,9 +43,8 @@ namespace SwfLib.SwfMill.Tests {
         }
 
         [Test]
-        [Ignore]
         public void Sample2Test() {
-            const string source = @"D:\Sergey\swf\first.swf";
+            const string source = @"D:\Test\swf\first.swf";
             var secondTags = IterateTags(Cycle(source)).ToList();
 
             var firstFile = File.Open(source, FileMode.Open);

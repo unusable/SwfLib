@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", "{AFFA8CD0-B0EC-44C2-AB6D-64943CF12F3B}"
 	ProjectSection(SolutionItems) = preProject
@@ -18,7 +18,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{8CD70156-C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nUnit", "nUnit", "{242E2CE4-A110-4F8C-AECF-FDF29547B943}"
 	ProjectSection(SolutionItems) = preProject
-		References\nUnit\nunit.framework.dll = References\nUnit\nunit.framework.dll
+		packages\NUnit.3.6.0\lib\net45\nunit.framework.dll = packages\NUnit.3.6.0\lib\net45\nunit.framework.dll
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "swfmill", "swfmill", "{3850D393-CC9A-44E6-BCE0-DD94AB5DCECD}"

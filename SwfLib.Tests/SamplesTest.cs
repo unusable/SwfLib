@@ -12,7 +12,6 @@ namespace SwfLib.Tests {
     public class SamplesTest : BaseSampleTest {
 
         [Test]
-        [Ignore]
         public void Sample1Test() {
             const string path = "Sample - 1.swf";
             var file = ReadSwfFile(path);
@@ -38,10 +37,9 @@ namespace SwfLib.Tests {
         }
 
       
-        [Ignore]
         [Test]
         public void Test() {
-            const string source = @"D:\Sergey\swf\";
+            const string source = @"D:\Test\swf\";
             var first = Path.Combine(source, "first.swf");
             var second = Path.Combine(source, "second.swf");
             var firstTags = GetTagsMap(IterateTags(first));
@@ -90,9 +88,8 @@ namespace SwfLib.Tests {
         }
 
         [Test]
-        [Ignore]
         public void GrabAllSwfsFromMachine() {
-            var source = @"D:\Sergey\Samples\";
+            var source = @"D:\Test\Samples\";
             var target = Path.Combine(source, "tags");
             if (!Directory.Exists(target)) {
                 Directory.CreateDirectory(target);
