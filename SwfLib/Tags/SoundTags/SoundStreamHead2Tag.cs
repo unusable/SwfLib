@@ -1,5 +1,6 @@
 ﻿namespace SwfLib.Tags.SoundTags {
-    public class SoundStreamHead2Tag : SwfTagBase {
+    public class SoundStreamHead2Tag : SoundStreamBaseTag
+    {
 
         public override SwfTagType TagType {
             get { return SwfTagType.SoundStreamHead2; }

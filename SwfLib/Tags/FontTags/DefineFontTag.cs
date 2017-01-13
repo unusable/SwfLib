@@ -4,7 +4,8 @@ namespace SwfLib.Tags.FontTags {
     /// <summary>
     /// Represents DefineFont tag.
     /// </summary>
-    public class DefineFontTag : FontBaseTag {
+    public class DefineFontTag : FontBaseTag
+    {
 
         public readonly IList<ushort> OffsetTable = new List<ushort>();
 

@@ -1,5 +1,9 @@
-﻿namespace SwfLib.Tags.SoundTags {
-    public class StartSoundTag : SwfTagBase {
+﻿using SwfLib.Tags.ControlTags;
+
+
+namespace SwfLib.Tags.SoundTags {
+    public class StartSoundTag : ControlBaseTag
+    {
 
         public override SwfTagType TagType {
             get { return SwfTagType.StartSound; }

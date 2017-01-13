@@ -2,7 +2,8 @@
     /// <summary>
     /// Represnts JPEGTable tag.
     /// </summary>
-    public class JPEGTablesTag : SwfTagBase {
+    public class JPEGTablesTag : SwfTagBase
+    {
 
         public byte[] JPEGData { get; set; }
 

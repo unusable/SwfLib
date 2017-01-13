@@ -2,12 +2,13 @@
     /// <summary>
     /// Represents base class for bitmap tags.
     /// </summary>
-    public abstract class BitmapBaseTag : SwfTagBase {
+    public abstract class BitmapBaseTag : CharacterTag
+    {
 
         /// <summary>
         /// Gets or sets character ID>
         /// </summary>
-        public ushort CharacterID { get; set; }
+        public override ushort CharacterID { get; set; }
 
     }
 }

@@ -2,7 +2,7 @@
 using SwfLib.Fonts;
 
 namespace SwfLib.Tags.FontTags {
-    public class DefineFontAlignZonesTag : FontBaseTag {
+    public class DefineFontAlignZonesTag : FontExtensionTag {
 
         public byte Flags {
             get { return (byte)(((byte)CsmTableHint & 0x03) | (Reserved << 2)); }

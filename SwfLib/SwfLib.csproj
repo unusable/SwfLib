@@ -139,6 +139,8 @@
     <Compile Include="Shapes\FillStyles\SolidFillStyleRGBA.cs" />
     <Compile Include="Tags\BitmapTags\DefineBitsJpegAlphaBase.cs" />
     <Compile Include="Tags\BitmapTags\DefineBitsJpegTagBase.cs" />
+    <Compile Include="Tags\CharacterTag.cs" />
+    <Compile Include="Tags\SoundTags\SoundStreamBaseTag.cs" />
     <Compile Include="Tags\TagStreamExt.cs" />
     <Compile Include="Utils\UnsignedBitsCount.cs" />
     <Compile Include="Buttons\ButtonCondition.cs" />

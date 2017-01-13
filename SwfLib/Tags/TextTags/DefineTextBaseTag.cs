@@ -1,9 +1,10 @@
 ﻿using SwfLib.Data;
 
 namespace SwfLib.Tags.TextTags {
-    public abstract class DefineTextBaseTag : SwfTagBase {
+    public abstract class DefineTextBaseTag : CharacterTag
+    {
 
-        public ushort CharacterID { get; set; }
+        public override ushort CharacterID { get; set; }
 
         public SwfRect TextBounds { get; set; }
 

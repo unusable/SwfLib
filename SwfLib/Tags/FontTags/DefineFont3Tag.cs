@@ -5,7 +5,8 @@ namespace SwfLib.Tags.FontTags {
     /// <summary>
     /// Represents DefineFont3 tag.
     /// </summary>
-    public class DefineFont3Tag : FontBaseTag {
+    public class DefineFont3Tag : FontBaseTag
+    {
 
         public byte Language { get; set; }
 

@@ -1,7 +1,11 @@
 ﻿namespace SwfLib.Tags {
-    public class DefineBinaryDataTag : SwfTagBase {
+    public class DefineBinaryDataTag : CharacterTag
+    {
 
-        public override SwfTagType TagType {
+        public override ushort CharacterID { get; set; }
+
+        public override SwfTagType TagType
+        {
             get { return SwfTagType.DefineBinaryData; }
         }
 

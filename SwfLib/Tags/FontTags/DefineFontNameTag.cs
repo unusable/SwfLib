@@ -1,5 +1,5 @@
 ﻿namespace SwfLib.Tags.FontTags {
-    public class DefineFontNameTag : FontBaseTag {
+    public class DefineFontNameTag : FontExtensionTag {
 
         public string FontName;
 

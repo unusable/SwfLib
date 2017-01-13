@@ -17,23 +17,23 @@ namespace SwfLib.Tags.DisplayListTags {
         public bool HasImage;
 
 
-        public string Name;
+        public string Name{ get; set; }
 
-        public string ClassName;
+        public string ClassName{ get; set; }
 
-        public byte Reserved;
+        public byte Reserved{ get; set; }
 
-        public ushort? Ratio;
+        public ushort? Ratio { get; set; }
 
-        public byte? BitmapCache;
+        public byte? BitmapCache{ get; set; }
 
-        public ushort? ClipDepth;
+        public ushort? ClipDepth{ get; set; }
 
-        public ColorTransformRGBA? ColorTransform;
+        public ColorTransformRGBA? ColorTransform{ get; set; }
 
         public readonly ClipActionsList ClipActions = new ClipActionsList();
 
-        public BlendMode? BlendMode;
+        public BlendMode? BlendMode{ get; set; }
 
         public readonly IList<BaseFilter> Filters = new List<BaseFilter>();
 

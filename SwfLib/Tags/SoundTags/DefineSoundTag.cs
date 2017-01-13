@@ -1,5 +1,19 @@
 ﻿namespace SwfLib.Tags.SoundTags {
-    public class DefineSoundTag : SwfTagBase {
+    public class DefineSoundTag : CharacterTag
+    {
+        public override ushort CharacterID
+        {
+            get
+            {
+                return SoundId;
+            }
+            set
+            {
+                SoundId = value;
+            }
+        }
+
+        public ushort SoundId { get; set; }
 
         /// <summary>
         /// Gets swf tag type.

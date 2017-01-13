@@ -1,5 +1,6 @@
 ﻿namespace SwfLib.Tags.DisplayListTags {
-    public class ShowFrameTag : SwfTagBase {
+    public class ShowFrameTag : DisplayListBaseTag
+    {
 
         public override SwfTagType TagType {
             get { return SwfTagType.ShowFrame; }

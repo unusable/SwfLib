@@ -271,6 +271,7 @@ namespace SwfLib {
         }
 
         SwfTagBase ISwfTagVisitor<ISwfStreamReader, SwfTagBase>.Visit(DefineScalingGridTag tag, ISwfStreamReader reader) {
+            tag.CharacterID = reader.ReadUInt16();
             return tag;
         }
 
@@ -397,9 +398,10 @@ namespace SwfLib {
         SwfTagBase ISwfTagVisitor<ISwfStreamReader, SwfTagBase>.Visit(DefineBitsJPEG3Tag tag, ISwfStreamReader reader) {
             tag.CharacterID = reader.ReadUInt16();
             var alphaDataOffset = reader.ReadUInt32();
-            tag.ImageData = reader.ReadBytes((int)alphaDataOffset);
-            tag.BitmapAlphaData = reader.ReadRest();
             return tag;
+            //tag.ImageData = reader.ReadBytes((int)alphaDataOffset);
+            //tag.BitmapAlphaData = reader.ReadRest();
+            //return tag;
         }
 
         SwfTagBase ISwfTagVisitor<ISwfStreamReader, SwfTagBase>.Visit(DefineBitsJPEG4Tag tag, ISwfStreamReader reader) {
@@ -438,10 +440,12 @@ namespace SwfLib {
         #endregion
 
         SwfTagBase ISwfTagVisitor<ISwfStreamReader, SwfTagBase>.Visit(DefineMorphShapeTag tag, ISwfStreamReader reader) {
+            tag.CharacterID = reader.ReadUInt16();
             return tag;
         }
 
         SwfTagBase ISwfTagVisitor<ISwfStreamReader, SwfTagBase>.Visit(DefineMorphShape2Tag tag, ISwfStreamReader reader) {
+            tag.CharacterID = reader.ReadUInt16();
             return tag;
         }
 
@@ -490,6 +494,10 @@ namespace SwfLib {
             tag.FontName = Encoding.UTF8.GetString(reader.ReadBytes(nameLength));
 
             int glyphsCount = reader.ReadUInt16();
+            if(reader.BytesLeft <= 0)
+            {
+                return tag;
+            }
 
             var offsetTable = new uint[glyphsCount];
             for (var i = 0; i < glyphsCount; i++) {
