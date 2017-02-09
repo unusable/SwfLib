@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SwfLib</RootNamespace>
     <AssemblyName>SwfLib</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
@@ -120,6 +120,7 @@
     <Compile Include="ISwfStreamReader.cs" />
     <Compile Include="ISwfStreamWriter.cs" />
     <Compile Include="Shapes\FillStyles\BitmapMode.cs" />
+    <Compile Include="Shapes\FillStyles\FillStyleBase.cs" />
     <Compile Include="Shapes\FillStyles\FillStyleRGBAWriter.cs" />
     <Compile Include="Shapes\FillStyles\FillStyleRGBAReader.cs" />
     <Compile Include="Shapes\FillStyles\FillStyleRGBWriter.cs" />

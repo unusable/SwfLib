@@ -113,7 +113,7 @@ namespace SwfLib {
                 var ser = new SwfTagDeserializer(file);
                 var tagData = reader.ReadTagData();
                 SwfTagBase tag = ser.ReadTag(tagData);
-                Console.WriteLine("Read Tag: {0}", tag.TagType);
+                //Console.WriteLine("Read Tag: {0}", tag.TagType);
                 if (tag != null) file.Tags.Add(tag);
                 else throw new InvalidOperationException("Tag can't be null. Loss of data possible");
             }

@@ -1,5 +1,5 @@
 ﻿namespace SwfLib.Shapes.FillStyles {
-    public abstract class FillStyleRGBA {
+    public abstract class FillStyleRGBA : FillStyleBase {
 
         /// <summary>
         /// Gets type of fill style.

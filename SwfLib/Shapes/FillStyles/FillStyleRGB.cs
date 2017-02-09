@@ -1,5 +1,6 @@
 ﻿namespace SwfLib.Shapes.FillStyles {
-    public abstract class FillStyleRGB {
+    public abstract class FillStyleRGB : FillStyleBase
+    {
 
         /// <summary>
         /// Gets type of fill style.
